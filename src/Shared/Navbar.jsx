@@ -16,24 +16,24 @@ const Navbar = () => {
   }
     const navOptions = <>
    <NavLink to="/"  >
-    <li  className='list-none font-medium mr-4 text-[#FFFFFF]'>Home</li>
+    <li  className='list-none font-medium mr-4  text-[#FFFFFF]'>Home</li>
     </NavLink> 
    <NavLink to="/community"  >
-    <li style={{color:"#202122"}} className='list-none font-medium'><a>Community</a></li>
+    <li  className='list-none font-medium mr-4  text-[#FFFFFF]'><a>Community</a></li>
     </NavLink> 
    <NavLink to="/blog" >
-    <li style={{color:"#202122"}} className='list-none font-medium'><a>Blogs</a></li>
+    <li  className='list-none font-medium mr-4  text-[#FFFFFF]'><a>Blogs</a></li>
     </NavLink> 
    <NavLink to="/about">
-    <li style={{color:"#202122"}} className='list-none font-medium'><a>About Us</a></li>
+    <li className='list-none font-medium mr-4  text-[#FFFFFF]'><a>About Us</a></li>
     </NavLink> 
    <NavLink to="/contact">
-    <li style={{color:"#202122"}} className='list-none font-medium'><a>Contact Us</a></li>
+    <li  className='list-none font-medium mr-4  text-[#FFFFFF]'><a>Contact Us</a></li>
     </NavLink> 
     </>
     return (
         <div>
-          <div className="navbar  -mt-10 ">
+          <div className="navbar bg-[#202122] mt-4 mb-10 rounded-lg">
   <div className="navbar-start">
     <div className="dropdown lg:hidden">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -45,7 +45,7 @@ const Navbar = () => {
     </div>
     <div className='flex justify-center items-center '>
 
-<img src='./../../public/image/Logo.png' className='w-[200px] h-[200px] '></img>
+<h1 className='text-3xl text-[#FFFFFF]'>Task<span className='text-[#FFDE59]'>Manage</span></h1>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex ">
@@ -59,7 +59,7 @@ const Navbar = () => {
         user?<>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img  src={user?.photoURL} />
         </div>
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -68,7 +68,7 @@ const Navbar = () => {
            {user?.displayName}
           </a>
         </li>
-        <Link to="/dash">
+        <Link to="/dashboard">
         <li><a>Dashboard</a></li>
         </Link>
         <li><a onClick={handleLogOut} className=' btn bg-[#FFDE59]'>Logout</a></li>

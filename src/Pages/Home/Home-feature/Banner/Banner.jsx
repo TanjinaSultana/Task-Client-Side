@@ -5,7 +5,7 @@ import { AuthContext } from '../../../../Providers/AuthProvider';
 const Banner = () => {
     const {user} = useContext(AuthContext)
     return (
-        <div className='-mt-10 cover'>
+        <div className='-mt-10 mb-24 cover'>
             <img src='./../../../../../public/image/banner.png' className='rounded-lg zindex-10'></img>
            <div className='-mt-[180px] ml-[80px]'>{
             user?

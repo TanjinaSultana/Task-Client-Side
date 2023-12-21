@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Emily Thompson",
+      "image": "https://i.ibb.co/k0mCgNZ/img2.jpg",
+      "email": "emily@example.com",
+      "contact": "Developer",
+      "education": "Bachelor's in Tourism Management",
+      "skills": ["Multilingual", "Outdoor Navigation", "Customer Service"],
+      "workExperience": "5 years of guiding experience in diverse locations."
+    },
+    {
+      "name": "John Rodriguez",
+      "image": "https://i.ibb.co/fHqxtSB/img1.jpg",
+      "email": "john@example.com",
+      "contact": "Student",
+      "education": "Associate's in Cultural Studies",
+      "skills": ["Historical Knowledge", "Culinary Expertise", "First Aid Certification"],
+      "workExperience": "Guided tours in historical cities for over 3 years."
+    },
+    {
+      "name": "Sophia Lee",
+      "image": "https://i.ibb.co/pf9MSWt/img4.jpg",
+      "email": "sophia@example.com",
+      "contact":  "Developer",
+      "education": "Master's in Adventure Tourism",
+      "skills": ["Mountain Climbing", "Wildlife Tracking", "Photography"],
+      "workExperience": "Specialized in adventurous expeditions for 7 years."
+    },
+    {
+      "name": "David Smith",
+      "image": "https://i.ibb.co/WFYysF0/img3.jpg",
+      "email": "david@example.com",
+      "contact": "Student",
+      "education": "Diploma in Ecotourism",
+      "skills": ["Environmental Conservation", "Bird Watching", "Interpersonal Skills"],
+      "workExperience": "Promoted ecotourism in natural reserves for 4 years."
+    },
+    {
+      "name": "Mia Johnson",
+      "image": "https://i.ibb.co/gdXHZWw/img8.jpg",
+      "email": "mia@example.com",
+      "contact":  "Developer",
+      "education": "Bachelor's in Archaeology",
+      "skills": ["Archaeological Site Tours", "Artifact Knowledge", "Communication"],
+      "workExperience": "Conducted archaeological tours for 6 years."
+    },
+    {
+      "name": "Willi Martinez",
+      "image": "https://i.ibb.co/xg6BGvX/img10.jpg",
+      "email": "william@example.com",
+      "contact":  "Developer",
+      "education": "Ph.D. in History",
+      "skills": ["Historical Research", "Linguistic Proficiency", "Interactive Presentations"],
+      "workExperience": "Published historian with 10 years of guiding experience."
+    },
+    {
+      "name": "Olivia Davis",
+      "image": "https://i.ibb.co/SfjgCgW/img6.jpg",
+      "email": "olivia@example.com",
+      "contact": "Student",
+      "education": "Bachelor's in Geography",
+      "skills": ["Geographical Insights", "Climate Knowledge", "Map Reading"],
+      "workExperience": "Guided geographical exploration tours for 4 years."
+    },
+    {
+      "name": "Daniel Brown",
+      "image": "https://i.ibb.co/3S6Bbn7/img7.jpg",
+      "email": "daniel@example.com",
+      "contact":  "Developer",
+      "education": "Master's in Cultural Anthropology",
+      "skills": ["Cultural Sensitivity", "Customary Practices", "Group Coordination"],
+      "workExperience": "Specialized in cultural anthropology tours for 8 years."
+    },
+    {
+      "name": "Ella Wilson",
+      "image": "https://i.ibb.co/HHT3cRy/img5.jpg",
+      "email": "ella@example.com",
+      "contact": "Student",
+      "education": "Bachelor's in Marine Biology",
+      "skills": ["Marine Life Identification", "Snorkeling Expertise", "Oceanography"],
+      "workExperience": "Conducted marine biology tours for 5 years."
+    },
+    {
+      "name": "Mia Jackson",
+      "image": "https://i.ibb.co/44vLS37/img9.jpg",
+      "email": "jackson@example.com",
+      "contact":  "Developer",
+      "education": "Diploma in Adventure Sports Management",
+      "skills": ["Adventure Sports Guidance", "Risk Management", "Emergency Response"],
+      "workExperience": "Managed adventure sports tours for 6 years."
+    }
+  ]
+  

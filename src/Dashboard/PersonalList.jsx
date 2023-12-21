@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useAxiosPublic from '../hooks/AxiosPublic';
-import { MdDelete } from "react-icons/md";
-import Swal from 'sweetalert2';
 import useTask from '../hooks/useTask';
+import { AuthContext } from '../Providers/AuthProvider';
+import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
-
-const TaskManage = () => {
-    const { task, loading, refetch } = useTask();
-    const [taskManage,setTask] = useState([])
-    const [axiosPublic] =useAxiosPublic()
- 
+import Swal from 'sweetalert2';
+const PersonalList = () => {
+  const [taskManage,setTasks] = useState([])
+    const {task,refetch}= useTask();
+    const {user}  = useContext(AuthContext)
+    const [axiosPublic] = useAxiosPublic()
     useEffect(()=>{
-       setTask(task)
-    },[task])
+        const remaining = task?.filter((item) => 
+        item?.email == user?.email )
+        setTasks(remaining)
+    },[task,user?.email])
     const handleDelete =(id)=>{
 
         axiosPublic.delete(`/task/${id}`)
@@ -40,14 +42,10 @@ const TaskManage = () => {
                 refetch();
             }
     }
-    
     return (
-       
-       <div className='grid grid-cols-1 lg:grid-cols-3'>
         <div>
-
-        <h1 className='text-center'>Todo-List</h1>
-        {
+            <h1>Personal List</h1>
+             {
             taskManage?.map((tasks) => 
 //             <tr key={tasks._id}>
                 
@@ -166,13 +164,7 @@ const TaskManage = () => {
             )
         }
         </div>
-        <div>
-        <h1 className='text-center'>OnGoing</h1>
-        </div>
-   
-   </div>    
-       
     );
 };
 
-export default TaskManage;
+export default PersonalList;

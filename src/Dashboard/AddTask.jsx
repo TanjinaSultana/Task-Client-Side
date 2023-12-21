@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import useAxiosPublic from '../hooks/AxiosPublic';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const AddTask = () => {
   const [axiosPublic] = useAxiosPublic()
+  const {user} = useContext(AuthContext)
     const { handleSubmit, reset,register} = useForm();
     const onSubmit = async(data) => {
         // const imageFile = {image: data.image[0]}
@@ -17,6 +19,7 @@ const AddTask = () => {
   
           const taskItem = {
             title: data.title,
+            email: data.email,
             deadline : data.deadline,
             priority: data.priority,
             shortDesc : data.shortDesc
@@ -41,17 +44,18 @@ const AddTask = () => {
       };
     return (
         <div>
-                  <section className="p-6 ">
+                  <section className="p-6  ">
 	<form   className="container flex flex-col mx-auto space-y-12" onSubmit={handleSubmit(onSubmit)}>
 		<fieldset  className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm  bg-[#EAEBF0]">
-			<div className="space-y-2 col-span-full lg:col-span-1">
-				<p className="font-medium">Add Task</p>
-				
-			</div>
 			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
 				<div className="col-span-full sm:col-span-3">
 					<label  className="text-sm font-medium">Title</label>
 					<input id="title" name="title" type="text" placeholder="Task Title" className="p-3 w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" {...register('title', { required: 'title is required' })}  />
+				</div>
+			
+				<div className="col-span-full sm:col-span-3">
+					<label  className="text-sm font-medium">email</label>
+					<input id="email" defaultValue={user?.email} name="email" type="text" placeholder="User Email" className="p-3 w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" {...register('email', { required: 'email is required' })}  />
 				</div>
              
 				<div className="col-span-full sm:col-span-3">
@@ -63,7 +67,7 @@ const AddTask = () => {
 					{/* <input id="state" type="text" placeholder="" className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" /> */}
                 <textarea  name="shortDesc"  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 p-3" rows="4" cols="40" maxLength="100" placeholder="Enter Description" {...register('shortDesc', { required: 'shortDesc is required' })}></textarea>
 				</div>
-              <div className='col-span-full sm:col-span-3 mt-8'>
+              <div className='col-span-full sm:col-span-3 -mt-16'>
 
                 <select name='priority' id='priority' className="select select-info  w-full max-w-xs" {...register('priority', { required: 'priority is required' })}>
   <option disabled selected >Priority</option>
@@ -76,7 +80,7 @@ const AddTask = () => {
 				
                 <div className="col-span-full sm:col-span-6  flex justify-center">
 
-				<button  className="btn px-8 py-3 font-semibold rounded text-white bg-[#5E6284]"  >Add Task</button>
+				<button  className="btn px-8 py-3 font-semibold rounded text-white bg-[#5E6284]"  >Create Task</button>
                 </div>
 			</div>
 		</fieldset>

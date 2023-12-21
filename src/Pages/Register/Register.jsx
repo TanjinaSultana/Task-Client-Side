@@ -16,7 +16,7 @@ const Register = () => {
     createUser(data.email, data.password)
       .then(res => {
        
-        updateUserProfile(data.name,data.photo)
+        updateUserProfile(data.name,data.image)
         .then(()=>{
           
 
@@ -49,6 +49,12 @@ const Register = () => {
             <span className="label-text">Name</span>
           </label>
           <input type="name" placeholder="name" className="input input-bordered" required   {...register("name", { required: true })}/>
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Image</span>
+          </label>
+          <input type="text" placeholder="image" className="input input-bordered" required   {...register("image", { required: true })}/>
         </div>
         <div className="form-control">
           <label className="label">
