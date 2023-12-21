@@ -22,8 +22,8 @@ const Register = () => {
 
                reset();
                console.log('succes');
-               toast.success("Registration Sucessfully");
                navigate("/")
+               toast.success("Registration Sucessfully");
            
                 
               
