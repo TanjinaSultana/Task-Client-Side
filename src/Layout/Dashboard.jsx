@@ -26,7 +26,7 @@ const Dashboard = ({ children }) => {
           </label>
         </div>
         <div className="drawer-side">
-        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <ul className="menu p-4 w-80 min-h-full bg-[#FFDE59] text-base-content">
  <div>
     <div  className='flex justify-center'>
 
@@ -36,13 +36,17 @@ const Dashboard = ({ children }) => {
 
     <h3 className='text-xl font-bold'>{user?.displayName}</h3>
     </div>
+    <div className='flex justify-center'>
+
+   
     <h3 className='text-base font-bold'>{user?.email}</h3>
+    </div>
  </div>
   <li>
-    <Link to="/dashboard/add">Task Management</Link>
+    <Link to="/dashboard/add" className='text-base font-medium'>Task Management</Link>
   </li>
   <li>
-    <Link to="/">Home</Link>
+    <Link to="/" className='text-base font-bold'>Home</Link>
   </li>
 </ul>
 

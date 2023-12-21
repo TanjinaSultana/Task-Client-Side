@@ -80,7 +80,7 @@ const AddTask = () => {
 				
                 <div className="col-span-full sm:col-span-6  flex justify-center">
 
-				<button  className="btn px-8 py-3 font-semibold rounded text-white bg-[#5E6284]"  >Create Task</button>
+				<button  className="btn px-8 py-3 font-semibold rounded text-white bg-[#FFDE59]"  >Create Task</button>
                 </div>
 			</div>
 		</fieldset>

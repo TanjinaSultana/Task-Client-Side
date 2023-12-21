@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Google from '../SocialLogin/Google';
+import Github from '../SocialLogin/Github';
 
 const Register = () => {
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
@@ -72,7 +73,11 @@ const Register = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
+        <div className='flex'>
+
         <Google></Google>
+        <Github></Github>
+        </div>
       </form>
     </div>
   </div>

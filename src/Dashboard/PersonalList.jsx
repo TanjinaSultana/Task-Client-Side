@@ -44,7 +44,7 @@ const PersonalList = () => {
     }
     return (
         <div>
-            <h1>Personal List</h1>
+            <h1 className='text-base font-bold text-center'>Personal List</h1>
              {
             taskManage?.map((tasks) => 
 //             <tr key={tasks._id}>

@@ -18,7 +18,7 @@ const Contact = () => {
     };
     return (
         <div style={{marginTop:"170px"}}>
-            <h1 style={{display:"flex",justifyContent:"center"}}>Contact With Us</h1>
+            <h1 style={{display:"flex",justifyContent:"center"}} className='font-medium'>Contact With Us</h1>
              <div style={{display:"flex",justifyContent:"center",padding:"30px"}}>
              <div>
       {formSubmitted ? (
@@ -27,8 +27,9 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className='rounded-lg' style={{border:"2px solid #212022",padding:"50px"}}>
           <label  className='font-medium'>
             Name:
+
             <input
-            className='border-2'
+            className='border-2 border-[#202122] px-3'
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -40,6 +41,7 @@ const Contact = () => {
           <label className='font-medium'>
             Email:
             <input
+            className='border-2 border-[#202122] px-3'
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -51,6 +53,7 @@ const Contact = () => {
           <label className='font-medium'>
             Description:
             <textarea
+            className='border-2 border-[#202122] px-3'
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required

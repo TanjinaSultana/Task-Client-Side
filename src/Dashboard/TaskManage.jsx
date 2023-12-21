@@ -46,7 +46,7 @@ const TaskManage = () => {
        <div className='grid grid-cols-1 lg:grid-cols-3'>
         <div>
 
-        <h1 className='text-center'>Todo-List</h1>
+        <h1 className='text-base font-bold text-center'>Todo-List</h1>
         {
             taskManage?.map((tasks) => 
 //             <tr key={tasks._id}>
@@ -167,7 +167,7 @@ const TaskManage = () => {
         }
         </div>
         <div>
-        <h1 className='text-center'>OnGoing</h1>
+        <h1 className='text-base font-bold text-center'>OnGoing</h1>
         </div>
    
    </div>    
