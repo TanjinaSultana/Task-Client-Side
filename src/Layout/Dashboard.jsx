@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TaskManage from '../Dashboard/TaskManage';
+import AddTask from '../Dashboard/AddTask';
 
 const Dashboard = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = ({ children }) => {
         <div className="drawer-content flex flex-col items-center justify-center">
           {children}
           <TaskManage></TaskManage>
+          <AddTask></AddTask>
           <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
           
           </label>
