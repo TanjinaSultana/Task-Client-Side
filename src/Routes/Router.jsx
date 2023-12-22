@@ -14,6 +14,7 @@ import Community from '../Pages/Community/Community';
 import Contact from '../Pages/Contact/Contact';
 
 
+
   // const router = createBrowserRouter([
   //   {
   //     path: "/",
@@ -79,6 +80,12 @@ import Contact from '../Pages/Contact/Contact';
           path: 'contact',
           element: <Contact></Contact>
         },
+        // {
+        //   path: '/update/:_id',
+        //   element: <Update></Update>,
+        //   loader: ({params})  => fetch(`http://localhost:5000/task/${params._id}`)
+  
+        // },
        
         {
           path: 'register',

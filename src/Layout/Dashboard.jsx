@@ -5,12 +5,14 @@ import AddTask from '../Dashboard/AddTask';
 import TaskManage from '../Dashboard/TaskManage';
 import { AuthContext } from '../Providers/AuthProvider';
 import PersonalList from '../Dashboard/PersonalList';
+import { Toaster } from 'react-hot-toast';
 
 
 const Dashboard = ({ children }) => {
     const {user}= useContext(AuthContext)
   return (
     <div>
+      <Toaster></Toaster>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Providers/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Google from '../SocialLogin/Google';
 import Github from '../SocialLogin/Github';
 
@@ -38,7 +38,7 @@ const Register = () => {
   };
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Register now!</h1>
@@ -70,10 +70,13 @@ const Register = () => {
           <input type="password" placeholder="password" className="input input-bordered" required   {...register("password", { required: true })}/>
           
         </div>
+        <label className="label">
+          <p><small  style={{fontSize:"14px",fontWeight:"normal"}}>Already Logged In? <a><Link to="/login" className='underline'><a>Login</a></Link></a> </small></p>
+          </label>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button className="btn bg-[#FFDE59] text-black text-base">Register</button>
         </div>
-        <div className='flex'>
+        <div className='flex justify-center'>
 
         <Google></Google>
         <Github></Github>

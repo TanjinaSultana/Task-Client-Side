@@ -27,7 +27,7 @@ const Login = () => {
      }
     return (
         <div>
-           <div className="hero min-h-screen bg-base-200">
+           <div className="hero min-h-screen ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
@@ -47,11 +47,11 @@ const Login = () => {
           </label>
           <input type="password" name='password' placeholder="password" className="input input-bordered" required />
           <label className="label">
-          <p><small  style={{fontSize:"14px",fontWeight:"normal"}}>New Here? <Link to="/register">Create an account</Link> </small></p>
+          <p><small  style={{fontSize:"14px",fontWeight:"normal"}}>New Here? <Link to="/register" className='underline'><a>Create an account</a></Link> </small></p>
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-[#FFDE59] text-black text-base">Login</button>
         </div>
       </form>
     </div>

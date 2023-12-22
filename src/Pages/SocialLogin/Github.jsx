@@ -11,13 +11,13 @@ const Github = () => {
         githubSignIn().
         then(result=>{
             navigate("/");
-            Swal.fire("login succes with Github");
+            Swal.fire("login succesfully with Github");
         } )
     }
     return (
         <div>
-            <div className='ml-32'>
-             <button onClick={handleGoogle} className="btn border-none text-white bg-[#880ED4]">Github</button>
+            <div className=''>
+             <button onClick={handleGoogle} className="btn border-none bg-[#FFDE59] text-black text-base">Github</button>
             
         </div>
         </div>

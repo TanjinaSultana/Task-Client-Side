@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import useAxiosPublic from '../hooks/AxiosPublic';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Providers/AuthProvider';
+import toast from 'react-hot-toast';
+
 
 const AddTask = () => {
   const [axiosPublic] = useAxiosPublic()
@@ -30,10 +32,10 @@ const AddTask = () => {
          try{
   
            const tasks = await axiosPublic.post('/task',taskItem)
-           console.log(tasks);
+        
            if(tasks.data.insertedId){
            reset()
-           Swal.fire("Task added");
+          toast("Task added");
            }
           }catch(err){
             console.log(err);
